@@ -4,7 +4,7 @@ listing:
   contents: posts
   sort: "date desc"
   type: default
-  image-placeholder: "images/logo.png"
+  image-placeholder: "turtle.jpg"
   categories: true
   sort-ui: false
   filter-ui: false
