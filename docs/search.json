@@ -4,7 +4,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "The content on this page is from about.qmd. Edit that file to change how this page looks.\n“About” pages are special quarto template pages, with multiple options: https://quarto.org/docs/websites/website-about.html.\nTry changing the template type from jolla to one of the other options for a different look and feel.\nTesting Testing 123\nTets text test text test text.\nwefiuwqefhiwoqfhwioqefhiowqhf\nthe red fox jumps over the brown log"
+    "text": "The content on this page is from about.qmd. Edit that file to change how this page looks.\nText\n\nBullet\n\nNumber\nNumber two\n\n\nGoogle used to be great.\n\n2+2\n\n[1] 4\n\nlibrary(ggplot2)\nggplot(mpg, aes(x = hwy, y = cyl)) + geom_point()\n\n\n\n\n\n\n\n\nIntroduction\nMethods\nData Source\npackages Used\nResults.\nResults\nDiscussion"
   },
   {
     "objectID": "posts/Example_assignment/index.html",
