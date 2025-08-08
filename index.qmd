@@ -1,17 +1,67 @@
 ---
-title: "quartoCourseBlog"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  image-placeholder: "turtle.jpg"
-  categories: true
-  sort-ui: false
-  filter-ui: false
+title: "Future Thought of Consequences"
 page-layout: full
 title-block-banner: true
 ---
 
-Hello
+![](images/Future Thought.png){width="690"}**\
+\
+Introduction**
 
-![](https://loe.org/content/2016-07-15/TURTLES-Blanding's_turtle_up_close.jpg){width="390"}
+-   Does age play a major impact on someone's ability to think ahead in the future and about potential future consequences? This question interest me because the ability to consciously think about the future is a very human quality that most animals do not do, so I wonder at what ages people start using that skill, and when it begins to longer be of importance.
+-   I predict that people on the younger and older end of the question’s age spectrum will not be as likely to think about the future, while those in the middle will be much more likely to think about the future.
+-    This data set I downloaded comes from Kaggle: [https://www.kaggle.com/datasets/yamqwe/consideration-of-future-consequences](https://5862e355173143f79a0d9d100705273d.app.posit.cloud/#0){.uri style="text-decoration: underline; color: rgb(0, 0, 255) !important; margin-bottom: 0.1em;"}
+
+**Approach**
+
+-   Data Set
+
+    -   The source of this information comes from [http://openpsychometrics.org/](https://5862e355173143f79a0d9d100705273d.app.posit.cloud/#0){style="text-decoration: underline; color: rgb(0, 0, 255) !important;"}. A non profit website that attempts to teach people about psychology. In this case, how much people do or do not think about their future.
+
+    -   The data was collected online on their website via a survey that anyone was able to fill out, though some restrictions applied to recording final data, such as age, and self admitted accuracy of score. The survey asked multiple questions about how much, or how little they think about their future.
+
+    -   The variables mostly included the scores that each person gave themselves for their Consideration of Future Consequences. Each question on a scale of 1-5. Along with the participants age, gender, self admitted accuracy of answers, and country.
+
+    -   There was a total of 15,015 valid responses from the participants, ( Some results had negative accuracy or scores, which are not possible for the survey )
+
+    -   The original survey did not use the points to determine a total amount of future thought, a high amount of points could measure both high and low thought. In order to get a total amount, I split the points into two categories, high and low thought, and combined them together at the end in order to get the average amount of future thinking.
+
+-   Tools
+
+    -   I used R Studio within Posit.Cloud to create the website, Github to host it, and library(tidyverse) and ggplot to apply the graphs on the website.
+
+-   Approach/Prediction
+
+    -   I will look at the correlation between age and the level of Consideration of Future Consequences.
+
+    -   I think people who are older than 20, but younger than 50, are going to be average around 13 points for Consideration of Future Consequences.
+
+**Results**
+
+```{r}
+library(ggplot2)
+library(tidyverse) #initializes the packages 
+data <- 'fixed_data.csv'
+read_data <- read.csv(data) |> filter(age <= 120 & accuracy<=100 & accuracy >= 0, if_any(Q1:Q12, ~ .x >= 0 ))
+
+positive_val <- c("Q1","Q2","Q6","Q7","Q8","Q10") # Positive value questions
+negative_val <- c("Q3","Q4","Q5","Q9","Q11","Q12")# Negative value questions
+future_thinking <- read_data |> dplyr::mutate(positive_future = rowSums(read_data[ ,positive_val], na.rm = TRUE),
+negative_future= rowSums(read_data[ ,negative_val], na.rm = TRUE))
+
+total_future <- future_thinking |> mutate(average_Future = (positive_future - negative_future)) #Includes the Total amount of points into the data graph.
+
+# The actual graph code
+ggplot(total_future, aes(x = age, y = average_Future)) +
+  geom_point (position = "jitter", size =0.1, alpha = 1 / 2) + labs(title="Age and Consideration of Future Consequences", x = "Age" , y= "Self Rated Future Thoughtfulness")
+```
+
+```{r}
+# A graph of the mean future thought level of every individual age.
+ggplot(total_future, aes(x = age, y = average_Future)) + stat_summary(fun.min = min, fun.max = max, fun = mean) + labs(title="Age and Consideration of Future Consequences", x = "Age" , y= "Self Rated Future Thoughtfulness")
+```
+
+**Discussion**
+
+-   From the graph, it seemed a vast majority of the people surveyed in general were within the range I predicted to have more future thought. Although it does not seem as if I was correct with my theory, majority of the results ranged between -7 and 15. As age goes higher, there is a slight increase in the level level of future thought.
+-   Although the second graph shows a slight increase in thought the older someone gets, a steep falloff happens around 67 years old, where, while not falling into the negative, is still a noticeable drop.

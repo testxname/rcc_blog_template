@@ -17,31 +17,56 @@ about:
 
 The content on this page is from `about.qmd`. Edit that file to change how this page looks.
 
-Text
+**Introduction**
 
--   Bullet
+-   Does age play a major impact on someone's ability to think ahead in the future and about potential future consequences.
+-   I predict that people on the younger and older end of the question’s age spectrum will not be as likely to think ahead, while those in the middle will be much more likely to think about the future.
+-   <https://www.kaggle.com/datasets/yamqwe/consideration-of-future-consequences> and are where my data is pulled from.
 
-    1.  Number
-    2.  Number two
+**Approach**
 
-Google used to be great.
+-   Data Set
 
-```{r}
-2+2
-library(ggplot2)
-ggplot(mpg, aes(x = hwy, y = cyl)) + geom_point()
-```
+    -   The source of this information comes from <http://openpsychometrics.org/>. A non profit website that attempts to teach people about psychology. In this case, how many people think about their future and what consequences may occur in it.
 
-Introduction
+    -   The data was collected online on their website via a survey that anyone was able to fill out, though some restrictions applied to recording final data, such as age, and self admitted accuracy of score. The survey asked multiple questions about how much, or how little they think about the future, in the present.
 
-Methods
+    -   The variables mostly included the scores that each person gave themselves for their Consideration of Future Consequences on each question on a scale of 1-5. Along with their age, gender, self admitted accuracy, and country.
 
-Data Source
+    -   There was a total of 15,015 valid responses from the participants, ( Some results had negative accuracy or scores, which are not possible for the survey)
 
-packages Used
+    -   The original survey did not use the points to determine a total amount of future thought, and points can measure both high and low thought, so I added positive future thought and negative future thought to get the average amount of future thought.
 
-Results.
+-   Tools
+
+    -   I used R Studio within Posit.Cloud to create the website, Github to host it, and library(tidyverse) and ggplot to apply the graphs on the website.
+
+-   Approach/Prediction
+
+    -   I will look at the correlation between age and the level of Consideration of Future Consequences.
+
+    -   I think that people who are older than 20, but younger than 50, are going to be close to average around 13 points for Consideration of Future Consequences.
 
 Results
 
+```{r}
+library(ggplot2)
+library(tidyverse)
+data <- 'fixed_data.csv'
+read_data <- read.csv(data) |> filter(age <= 120 & accuracy<=100 & accuracy >= 0, if_any(Q1:Q12, ~ .x >= 0 ))
+
+positive_val <- c("Q1","Q2","Q6","Q7","Q8","Q10")
+negative_val <- c("Q3","Q4","Q5","Q9","Q11","Q12")
+future_thinking <- read_data |> dplyr::mutate(positive_future = rowSums(read_data[ ,positive_val], na.rm = TRUE),
+negative_future= rowSums(read_data[ ,negative_val], na.rm = TRUE))
+
+total_future <- future_thinking |> mutate(average_Future = (positive_future - negative_future))
+
+
+
+ggplot(total_future, aes(x = age, y = average_Future, color = accuracy)) + geom_point (position = "jitter", size =0.1, alpha = 1 / 2) + labs(title="Age and Consideration of Future Consequences", x = "Age" , y= "Self Rated Future Thoughtfulness", color = "Accuracy")
+```
+
 Discussion
+
+-   From the graph, it seemed a vast majority of the people surveyed in general were within the range I predicted to have more future thought. Although it does not seem as if I was correct with my theory, majority of the results ranged between -7 and 15. As age goes higher, there is a slight increase in the level level of future thought.

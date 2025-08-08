@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>quartoCourseBlog – Xavier’s Test</title>
+<title>Future Thought of Consequences – Xavier Martinez: Future Consequences Graphs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,41 +20,58 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-748b535e376f14d4692bf2b2e5fd6380.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d7e0661e083c70e840a1bff3d3717e5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-33483a2b1ba06d2655a5eb3fb5bbf497.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -69,65 +86,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -140,19 +99,14 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Xavier’s Test</span>
+    <span class="navbar-title">Xavier Martinez: Future Consequences Graphs</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
-  </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/CrumpLab/quartoCourseBlog"> <i class="bi bi-github" role="img">
 </i> 
@@ -173,13 +127,13 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">quartoCourseBlog</h1>
+    <div class="quarto-title column-page">
+      <h1 class="title">Future Thought of Consequences</h1>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta column-page">
 
       
     
@@ -190,91 +144,98 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Z2VuZXJhbA==">general <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Z29hbHM=">goals <span class="quarto-category-count">(2)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 
 
 
 
 
-<p>Hello</p>
-<p><img src="https://loe.org/content/2016-07-15/TURTLES-Blanding's_turtle_up_close.jpg" class="img-fluid" width="390"></p>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Z29hbHMlMkNnZW5lcmFs" data-listing-date-sort="1666310400000" data-listing-file-modified-sort="1754496416177" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="98">
-<div class="thumbnail"><a href="./posts/my_first_post/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/my_first_post/thumbnail.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/my_first_post/index.html" class="no-external">My First post</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Z29hbHM='); return false;">goals</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Z2VuZXJhbA=='); return false;">general</div>
-
+<p><img src="images/Future Thought.png" class="img-fluid" width="690"><strong><br>
+<br>
+Introduction</strong></p>
+<ul>
+<li>Does age play a major impact on someone’s ability to think ahead in the future and about potential future consequences? This question interest me because the ability to consciously think about the future is a very human quality that most animals do not do, so I wonder at what ages people start using that skill, and when it begins to longer be of importance.</li>
+<li>I predict that people on the younger and older end of the question’s age spectrum will not be as likely to think about the future, while those in the middle will be much more likely to think about the future.</li>
+<li>This data set I downloaded comes from Kaggle: <a href="https://5862e355173143f79a0d9d100705273d.app.posit.cloud/#0" class="uri" style="text-decoration: underline; color: rgb(0, 0, 255) !important; margin-bottom: 0.1em;">https://www.kaggle.com/datasets/yamqwe/consideration-of-future-consequences</a></li>
+</ul>
+<p><strong>Approach</strong></p>
+<ul>
+<li><p>Data Set</p>
+<ul>
+<li><p>The source of this information comes from <a href="https://5862e355173143f79a0d9d100705273d.app.posit.cloud/#0" style="text-decoration: underline; color: rgb(0, 0, 255) !important;">http://openpsychometrics.org/</a>. A non profit website that attempts to teach people about psychology. In this case, how much people do or do not think about their future.</p></li>
+<li><p>The data was collected online on their website via a survey that anyone was able to fill out, though some restrictions applied to recording final data, such as age, and self admitted accuracy of score. The survey asked multiple questions about how much, or how little they think about their future.</p></li>
+<li><p>The variables mostly included the scores that each person gave themselves for their Consideration of Future Consequences. Each question on a scale of 1-5. Along with the participants age, gender, self admitted accuracy of answers, and country.</p></li>
+<li><p>There was a total of 15,015 valid responses from the participants, ( Some results had negative accuracy or scores, which are not possible for the survey )</p></li>
+<li><p>The original survey did not use the points to determine a total amount of future thought, a high amount of points could measure both high and low thought. In order to get a total amount, I split the points into two categories, high and low thought, and combined them together at the end in order to get the average amount of future thinking.</p></li>
+</ul></li>
+<li><p>Tools</p>
+<ul>
+<li>I used R Studio within Posit.Cloud to create the website, Github to host it, and library(tidyverse) and ggplot to apply the graphs on the website.</li>
+</ul></li>
+<li><p>Approach/Prediction</p>
+<ul>
+<li><p>I will look at the correlation between age and the level of Consideration of Future Consequences.</p></li>
+<li><p>I think people who are older than 20, but younger than 50, are going to be average around 13 points for Consideration of Future Consequences.</p></li>
+</ul></li>
+</ul>
+<p><strong>Results</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co">#initializes the packages </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ lubridate 1.9.4     ✔ tibble    3.3.0
+✔ purrr     1.1.0     ✔ tidyr     1.3.1
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
-<div class="delink listing-description"><a href="./posts/my_first_post/index.html" class="no-external">
-This is an example first post. Whatever you write here will appear inside your post.
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/my_first_post/index.html" class="no-external">
-<div class="listing-date">
-Oct 21, 2022
-</div>
-<div class="listing-author">
-Matt Crump
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Z29hbHMlMkNnZW5lcmFs" data-listing-date-sort="1666310400000" data-listing-file-modified-sort="1754496418769" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="96">
-<div class="thumbnail"><a href="./posts/Example_assignment/index.html" class="no-external">
-
-<p class="card-img-top"><img src="images/logo.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Example_assignment/index.html" class="no-external">Example assignment</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Z29hbHM='); return false;">goals</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Z2VuZXJhbA=='); return false;">general</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/Example_assignment/index.html" class="no-external">
-This assignment engages you in the process of introspection. Your task is to use introspection to evaluate and describe your own mental imagery abilities. Attempt to answer…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/Example_assignment/index.html" class="no-external">
-<div class="listing-date">
-Oct 21, 2022
-</div>
-<div class="listing-author">
-Matt Crump
-</div>
-</a>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="st">'fixed_data.csv'</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>read_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(data) <span class="sc">|&gt;</span> <span class="fu">filter</span>(age <span class="sc">&lt;=</span> <span class="dv">120</span> <span class="sc">&amp;</span> accuracy<span class="sc">&lt;=</span><span class="dv">100</span> <span class="sc">&amp;</span> accuracy <span class="sc">&gt;=</span> <span class="dv">0</span>, <span class="fu">if_any</span>(Q1<span class="sc">:</span>Q12, <span class="sc">~</span> .x <span class="sc">&gt;=</span> <span class="dv">0</span> ))</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>positive_val <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Q1"</span>,<span class="st">"Q2"</span>,<span class="st">"Q6"</span>,<span class="st">"Q7"</span>,<span class="st">"Q8"</span>,<span class="st">"Q10"</span>) <span class="co"># Positive value questions</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>negative_val <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Q3"</span>,<span class="st">"Q4"</span>,<span class="st">"Q5"</span>,<span class="st">"Q9"</span>,<span class="st">"Q11"</span>,<span class="st">"Q12"</span>)<span class="co"># Negative value questions</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>future_thinking <span class="ot">&lt;-</span> read_data <span class="sc">|&gt;</span> dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">positive_future =</span> <span class="fu">rowSums</span>(read_data[ ,positive_val], <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="at">negative_future=</span> <span class="fu">rowSums</span>(read_data[ ,negative_val], <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>total_future <span class="ot">&lt;-</span> future_thinking <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">average_Future =</span> (positive_future <span class="sc">-</span> negative_future)) <span class="co">#Includes the Total amount of points into the data graph.</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># The actual graph code</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(total_future, <span class="fu">aes</span>(<span class="at">x =</span> age, <span class="at">y =</span> average_Future)) <span class="sc">+</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span> (<span class="at">position =</span> <span class="st">"jitter"</span>, <span class="at">size =</span><span class="fl">0.1</span>, <span class="at">alpha =</span> <span class="dv">1</span> <span class="sc">/</span> <span class="dv">2</span>) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Age and Consideration of Future Consequences"</span>, <span class="at">x =</span> <span class="st">"Age"</span> , <span class="at">y=</span> <span class="st">"Self Rated Future Thoughtfulness"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
 </div>
 </div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A graph of the mean future thought level of every individual age.</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(total_future, <span class="fu">aes</span>(<span class="at">x =</span> age, <span class="at">y =</span> average_Future)) <span class="sc">+</span> <span class="fu">stat_summary</span>(<span class="at">fun.min =</span> min, <span class="at">fun.max =</span> max, <span class="at">fun =</span> mean) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Age and Consideration of Future Consequences"</span>, <span class="at">x =</span> <span class="st">"Age"</span> , <span class="at">y=</span> <span class="st">"Self Rated Future Thoughtfulness"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Discussion</strong></p>
+<ul>
+<li>From the graph, it seemed a vast majority of the people surveyed in general were within the range I predicted to have more future thought. Although it does not seem as if I was correct with my theory, majority of the results ranged between -7 and 15. As age goes higher, there is a slight increase in the level level of future thought.</li>
+<li>Although the second graph shows a slight increase in thought the older someone gets, a steep falloff happens around 67 years old, where, while not falling into the negative, is still a noticeable drop.</li>
+</ul>
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

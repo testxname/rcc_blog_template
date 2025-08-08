@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – Xavier’s Test</title>
+<title>About – Xavier Martinez: Future Consequences Graphs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -61,32 +61,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-748b535e376f14d4692bf2b2e5fd6380.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d7e0661e083c70e840a1bff3d3717e5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-33483a2b1ba06d2655a5eb3fb5bbf497.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -114,19 +98,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Xavier’s Test</span>
+    <span class="navbar-title">Xavier Martinez: Future Consequences Graphs</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
-<span class="menu-text">About</span></a>
-  </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/CrumpLab/quartoCourseBlog"> <i class="bi bi-github" role="img">
 </i> 
@@ -161,22 +140,60 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </header><main class="content" id="quarto-document-content">
 <p>The content on this page is from <code>about.qmd</code>. Edit that file to change how this page looks.</p>
-<p>Text</p>
+<p><strong>Introduction</strong></p>
 <ul>
-<li><p>Bullet</p>
-<ol type="1">
-<li>Number</li>
-<li>Number two</li>
-</ol></li>
+<li>Does age play a major impact on someone’s ability to think ahead in the future and about potential future consequences.</li>
+<li>I predict that people on the younger and older end of the question’s age spectrum will not be as likely to think ahead, while those in the middle will be much more likely to think about the future.</li>
+<li><a href="https://www.kaggle.com/datasets/yamqwe/consideration-of-future-consequences" class="uri">https://www.kaggle.com/datasets/yamqwe/consideration-of-future-consequences</a> and are where my data is pulled from.</li>
 </ul>
-<p>Google used to be great.</p>
+<p><strong>Approach</strong></p>
+<ul>
+<li><p>Data Set</p>
+<ul>
+<li><p>The source of this information comes from <a href="http://openpsychometrics.org/" class="uri">http://openpsychometrics.org/</a>. A non profit website that attempts to teach people about psychology. In this case, how many people think about their future and what consequences may occur in it.</p></li>
+<li><p>The data was collected online on their website via a survey that anyone was able to fill out, though some restrictions applied to recording final data, such as age, and self admitted accuracy of score. The survey asked multiple questions about how much, or how little they think about the future, in the present.</p></li>
+<li><p>The variables mostly included the scores that each person gave themselves for their Consideration of Future Consequences on each question on a scale of 1-5. Along with their age, gender, self admitted accuracy, and country.</p></li>
+<li><p>There was a total of 15,015 valid responses from the participants, ( Some results had negative accuracy or scores, which are not possible for the survey)</p></li>
+<li><p>The original survey did not use the points to determine a total amount of future thought, and points can measure both high and low thought, so I added positive future thought and negative future thought to get the average amount of future thought.</p></li>
+</ul></li>
+<li><p>Tools</p>
+<ul>
+<li>I used R Studio within Posit.Cloud to create the website, Github to host it, and library(tidyverse) and ggplot to apply the graphs on the website.</li>
+</ul></li>
+<li><p>Approach/Prediction</p>
+<ul>
+<li><p>I will look at the correlation between age and the level of Consideration of Future Consequences.</p></li>
+<li><p>I think that people who are older than 20, but younger than 50, are going to be close to average around 13 points for Consideration of Future Consequences.</p></li>
+</ul></li>
+</ul>
+<p>Results</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">+</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4</code></pre>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ lubridate 1.9.4     ✔ tibble    3.3.0
+✔ purrr     1.1.0     ✔ tidyr     1.3.1
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> hwy, <span class="at">y =</span> cyl)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="st">'fixed_data.csv'</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>read_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(data) <span class="sc">|&gt;</span> <span class="fu">filter</span>(age <span class="sc">&lt;=</span> <span class="dv">120</span> <span class="sc">&amp;</span> accuracy<span class="sc">&lt;=</span><span class="dv">100</span> <span class="sc">&amp;</span> accuracy <span class="sc">&gt;=</span> <span class="dv">0</span>, <span class="fu">if_any</span>(Q1<span class="sc">:</span>Q12, <span class="sc">~</span> .x <span class="sc">&gt;=</span> <span class="dv">0</span> ))</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>positive_val <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Q1"</span>,<span class="st">"Q2"</span>,<span class="st">"Q6"</span>,<span class="st">"Q7"</span>,<span class="st">"Q8"</span>,<span class="st">"Q10"</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>negative_val <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Q3"</span>,<span class="st">"Q4"</span>,<span class="st">"Q5"</span>,<span class="st">"Q9"</span>,<span class="st">"Q11"</span>,<span class="st">"Q12"</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>future_thinking <span class="ot">&lt;-</span> read_data <span class="sc">|&gt;</span> dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">positive_future =</span> <span class="fu">rowSums</span>(read_data[ ,positive_val], <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="at">negative_future=</span> <span class="fu">rowSums</span>(read_data[ ,negative_val], <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>total_future <span class="ot">&lt;-</span> future_thinking <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">average_Future =</span> (positive_future <span class="sc">-</span> negative_future))</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(total_future, <span class="fu">aes</span>(<span class="at">x =</span> age, <span class="at">y =</span> average_Future, <span class="at">color =</span> accuracy)) <span class="sc">+</span> <span class="fu">geom_point</span> (<span class="at">position =</span> <span class="st">"jitter"</span>, <span class="at">size =</span><span class="fl">0.1</span>, <span class="at">alpha =</span> <span class="dv">1</span> <span class="sc">/</span> <span class="dv">2</span>) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Age and Consideration of Future Consequences"</span>, <span class="at">x =</span> <span class="st">"Age"</span> , <span class="at">y=</span> <span class="st">"Self Rated Future Thoughtfulness"</span>, <span class="at">color =</span> <span class="st">"Accuracy"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -185,13 +202,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>Introduction</p>
-<p>Methods</p>
-<p>Data Source</p>
-<p>packages Used</p>
-<p>Results.</p>
-<p>Results</p>
 <p>Discussion</p>
+<ul>
+<li>From the graph, it seemed a vast majority of the people surveyed in general were within the range I predicted to have more future thought. Although it does not seem as if I was correct with my theory, majority of the results ranged between -7 and 15. As age goes higher, there is a slight increase in the level level of future thought.</li>
+</ul>
 
 
 </main> 
